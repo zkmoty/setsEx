@@ -11,8 +11,6 @@ import school
 
 # The principle will lecture to pupils who take no extra classes (literature, technology)
 # about the importance of expanding your horizons.
-# write a function that returns a sorted list of the names of the pupils who take no extra classes.
-# input - sets, each one corresponding to its name.
 
 # ----- ENTER SOME CODE HERE --------
 take_no_extra_classes = ['I should be a sorted list of the names of the pupils who take no extra classes. FIX ME']

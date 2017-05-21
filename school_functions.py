@@ -77,7 +77,7 @@ assert take_no_extra_classes(school.first_grade, school.second_grade, school.thi
             school.first_literature_group, school.second_literature_group) == ['Carl Hale', 'Ronald Tucker']
 
 
-# return a sorted list of the pupils who take axactly one extra class.
+# return a sorted list of the pupils who take exactly one extra class.
 # input - sets, each one corresponding to its name.
 def take_one_extra_class(first_literature_group, second_literature_group,
                          first_technology_group, second_technology_group):

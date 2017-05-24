@@ -1,6 +1,7 @@
-# An element is in the result set if it is in one of the two sets
-# >>> set([3, 4]) & set ([4, 5])
-# set([4])
+# union of sets
+# An element is in the result set if it is in both of the two sets
+# >>> set([3, 4]) | set ([4, 5])
+# set([3, 4, 5])
 
 import school
 

@@ -11,7 +11,7 @@ def grade_in_alphabetical_order(grade):
 
 assert grade_in_alphabetical_order(school.first_grade) == \
        ['Bryan Ortiz', 'David Saldivar', 'Helen Wilson', 'Jenifer Baldwin', 'Kim Meriwether',
-     'Michael Findley', 'Pamela Burris', 'Roger Miller', 'Roy Moore', 'Whitney Mcelyea']
+        'Michael Findley', 'Pamela Burris', 'Roger Miller', 'Roy Moore', 'Whitney Mcelyea']
 
 assert grade_in_alphabetical_order(school.fourth_grade) == \
        ['Brittany Clement', 'Charles Stone', 'Gabriel Hancock', 'John Sales', 'Mary Warren',
@@ -120,3 +120,35 @@ assert add_new_pupils(school.third_grade, school.new_3rd_grade_kids) == \
        {'Kobi Cohen', 'Charlie Berger', 'Douglas Pardo', 'Brett Mclean', 'Levi Levi',
         'Danny Koehler', 'Dorothy Welton', 'Eunice Lawler', 'Dennis Galicia', 'Brenda Hewitt',
         'Larry Coffin', 'Tammy Vilven'}
+
+
+# implement a function that compares two sets and prints the differences between them
+def assert_set_equals(set1, set2):
+    differences = []
+    difference_counter = 0
+    for diff in sorted(set1 - set2):
+        difference_counter += 1
+        differences.append('+{!r}'.format(diff))
+    for diff in sorted(set2 - set1):
+        difference_counter += 1
+        differences.append('-{!r}'.format(diff))
+    return '\n'.join(differences) if differences else 'identical sets!'
+
+
+print(assert_set_equals(school.fourth_grade, school.second_literature_group))
+assert assert_set_equals(school.fourth_grade, school.second_literature_group) == '\n'.join([
+    "+'Gabriel Hancock'",
+    "+'John Sales'",
+    "+'Michele Trowbridge'",
+    "+'Rafael Honkanen'",
+    "+'Rhonda Moreno'",
+    "-'Brett Mclean'",
+    "-'Charlie Berger'",
+    "-'Douglas Pardo'",
+    "-'Larry Coffin'",
+    "-'Tammy Vilven'",
+])
+
+
+print(assert_set_equals(school.fourth_grade, school.fourth_grade))
+assert assert_set_equals(school.fourth_grade, school.fourth_grade) == 'identical sets!'
